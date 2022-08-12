@@ -24,7 +24,6 @@ export default class PeoplePage extends React.Component {
   render() {
     return (
       <View>
-        <Header title="Peoples" />
         <PeopleList peoples={this.state.peoples} />
       </View>
     );
