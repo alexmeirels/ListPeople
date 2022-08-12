@@ -12,7 +12,9 @@ export default class PeoplePage extends React.Component {
       peoples: [],
     };
   }
-
+  selectPeople(){
+    this.props.navigation;
+  }
   componentDidMount = () => {
     axios.get('https://randomuser.me/api/?nat=br&results=5').then(response => {
       const {results} = response.data;
