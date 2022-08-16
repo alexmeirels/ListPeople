@@ -2,11 +2,14 @@ import React from 'react';
 import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 const PeopleListItem = props => {
-  const {people} = props;
+  const {people, navigate} = props;
   const {first, last} = people.name;
   const {thumbnail} = people.picture;
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => {
+        navigate({people});
+      }}>
       <View style={style.line}>
         <Image style={style.avatar} source={{uri: thumbnail}} />
         <Text style={style.lineText}>{`${first} ${last}`}</Text>

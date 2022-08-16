@@ -1,7 +1,8 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import PeoplePage from './src/screens/PeoplePage';
+import PeopleDetailPage from './src/screens/PeopleDetailPage';
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,16 @@ const MyStack = () => {
             },
           }}
           component={PeoplePage}
+        />
+        <Stack.Screen
+          name="PeopleDetailPage"
+          options={({route}) => {
+            const peopleName = route.params.people.name.first;
+            return {
+              title: peopleName,
+            };
+          }}
+          component={PeopleDetailPage}
         />
       </Stack.Navigator>
     </NavigationContainer>
