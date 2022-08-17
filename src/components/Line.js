@@ -5,7 +5,7 @@ import {View, Text, StyleSheet} from 'react-native';
 const Line = ({label, content}) => {
   return (
     <View style={style.line}>
-      <Text style={[style.cell, style.Label]}>{label}</Text>
+      <Text style={[style.cell, style.styleLabel]}>{label}</Text>
       <Text style={style.cell}>{content}</Text>
     </View>
   );
@@ -23,9 +23,9 @@ const style = StyleSheet.create({
     fontSize: 18,
     paddingLeft: 5,
   },
-  Label: {
+  styleLabel: {
     fontWeight: 'bold',
   },
 });
 
-export default Line();
+export default Line;

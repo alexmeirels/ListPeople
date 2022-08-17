@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {ScrollView, Text, StyleSheet} from 'react-native';
 import PeopleListItem from './PeopleListItem';
 
 const PeopleList = props => {
@@ -13,7 +13,7 @@ const PeopleList = props => {
       />
     );
   });
-  return <View style={style.container}>{items}</View>;
+  return <ScrollView style={style.container}>{items}</ScrollView>;
 };
 
 const style = StyleSheet.create({
